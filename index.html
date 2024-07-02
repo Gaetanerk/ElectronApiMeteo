@@ -1,0 +1,30 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-eval'; connect-src 'self' http://api.openweathermap.org https://api.openweathermap.org;">
+    <link href="./styles.css" rel="stylesheet">
+    <title>Météo</title>
+</head>
+
+<body>
+    <div>
+        <form>
+            <input type="text" id="city" placeholder="Entrer une ville">
+            <button type="submit" id="btnSearch">Rechercher</button>
+        </form>
+    </div>
+    <div>
+        <h1 id="cityName"></h1>
+        <p id="temperature"></p>
+        <p id="humidity"></p>
+        <p id="windSpeed"></p>
+    </div>
+    <!-- You can also require other files to run in this process -->
+    <script src="./renderer.js"></script>
+</body>
+
+</html>
